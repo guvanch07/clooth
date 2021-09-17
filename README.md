@@ -1,4 +1,4 @@
-# clooth
+# Clooth - online shopping store
 
 A new Flutter project.
 
