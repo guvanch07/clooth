@@ -1,3 +1,4 @@
+import 'package:clooth/catalog/tab_bar.dart';
 import 'package:clooth/widget/appbar.dart';
 import 'package:clooth/widget/primarybutton.dart';
 import 'package:clooth/widget/textfield.dart';
@@ -58,7 +59,14 @@ class RegisterScreen extends StatelessWidget {
             SizedBox(
               height: 75.h,
             ),
-            PrimaryButton(onPressed: () {}, text: 'Зарегистрироваться')
+            PrimaryButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TabBarScreen()),
+                  );
+                },
+                text: 'Зарегистрироваться')
           ],
         )),
       ),

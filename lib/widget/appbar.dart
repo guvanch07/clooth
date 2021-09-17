@@ -1,38 +1,59 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AppBarScreen extends StatelessWidget {
-  const AppBarScreen({this.icon, required this.text, this.icon1}) : super();
+class AppBarScreen extends AppBar {
+  AppBarScreen({Key? key, required Widget title})
+      : super(
+            backgroundColor: Color(0xffC13445),
+            key: key,
+            title: title,
+            centerTitle: true,
+            leading: IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios,
+              ),
+              onPressed: () {},
+            ),
+            actions: <Widget>[
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.search),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.menu),
+              ),
+            ]);
+}
 
-  final String text;
-  final icon;
-  final icon1;
-
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      title: Text(
-        text,
-        style: TextStyle(
-            color: Color(0xff666E6D),
-            fontSize: 24.sp,
-            fontFamily: 'Roboto',
-            fontWeight: FontWeight.normal),
-      ),
-      centerTitle: true,
-      actions: <Widget>[
-        icon,
-        icon1,
-      ],
-      leading: IconButton(
-        icon: Icon(
-          Icons.arrow_back_ios,
-          color: Color(0xff666E6D),
-          size: 27,
-        ),
-        onPressed: () => Navigator.pop(context),
-      ),
-      backgroundColor: Colors.transparent,
-    );
-  }
+class MyDrawer extends Drawer {
+  MyDrawer({
+    Key? key,
+  }) : super(
+            key: key,
+            child: ListView(
+              children: <Widget>[
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    'Личный кабинет',
+                    style: TextStyle(fontSize: 18.sp),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    'Информация',
+                    style: TextStyle(fontSize: 18.sp),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    'Контакты',
+                    style: TextStyle(fontSize: 18.sp),
+                  ),
+                ),
+              ],
+            ));
 }

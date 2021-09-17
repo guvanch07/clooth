@@ -41,7 +41,10 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(
               height: 60.h,
             ),
-            Image.asset('assets/girls.png'),
+            Container(
+                width: 248.w,
+                height: 248.h,
+                child: Image.asset('assets/grs.png')),
             SizedBox(
               height: 30.h,
             ),

@@ -18,14 +18,14 @@ class AuthScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    'assets/bg.png',
+                    'assets/0.75.png',
                   ),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            Center(
-              child: Positioned(
+            Positioned(
+              child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -96,7 +96,7 @@ class AuthButton extends StatelessWidget {
         side: BorderSide(color: Colors.white),
         borderRadius: BorderRadius.circular(15),
       ),
-      minWidth: 120,
+      minWidth: 125,
       color: Colors.white.withOpacity(0.4),
       textColor: Colors.white,
       child: Text(
