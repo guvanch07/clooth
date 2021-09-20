@@ -10,7 +10,14 @@ class BrandsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var statusBarHeight = MediaQuery.of(context).padding.top;
+    var appBarHeight = kToolbarHeight;
     return Scaffold(
+      drawerScrimColor: Colors.transparent,
+      endDrawer: Container(
+          padding: EdgeInsets.only(top: statusBarHeight + appBarHeight + 1),
+          width: 220.w,
+          child: MyDrawer()),
       appBar: AppBarScreen(
         title: Text(
           'Избранное',
@@ -44,7 +51,10 @@ class BrandsScreen extends StatelessWidget {
                     width: 220.w,
                   ),
                   Container(
-                    margin: EdgeInsets.all(20),
+                    margin: EdgeInsets.only(
+                      left: 20,
+                      right: 20,
+                    ),
                     child: SvgPicture.asset('assets/filtr.svg'),
                   ),
                 ],

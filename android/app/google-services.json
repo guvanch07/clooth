@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "254000734817",
+    "project_id": "clootsh-online",
+    "storage_bucket": "clootsh-online.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254000734817:android:3810fc42aa9013acc2c020",
+        "android_client_info": {
+          "package_name": "com.example.clooth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254000734817-6fu5pc22g2v7l2fnspde5dpjlbdvgug2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clooth",
+            "certificate_hash": "bb3e501fe8dac817388ca97d866ff4dfc5976301"
+          }
+        },
+        {
+          "client_id": "254000734817-9emm7jr0q85s903mvivvado6jg7i35dr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyA5igGk9IwDDldXOxJsAoQ_GxdrNmbWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254000734817-9emm7jr0q85s903mvivvado6jg7i35dr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

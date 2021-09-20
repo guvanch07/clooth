@@ -20,7 +20,11 @@ class TabBarScreen extends StatelessWidget {
             print('tapped $index');
           },
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Бренды'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.whatshot,
+                ),
+                label: 'Бренды'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.design_services), label: 'Дизайнеры'),
             BottomNavigationBarItem(

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppBarScreen extends AppBar {
-  AppBarScreen({Key? key, required Widget title})
+  AppBarScreen({Key? key, context, required Widget title})
       : super(
+            automaticallyImplyLeading: false,
             backgroundColor: Color(0xffC13445),
             key: key,
             title: title,
@@ -19,9 +20,11 @@ class AppBarScreen extends AppBar {
                 onPressed: () {},
                 icon: Icon(Icons.search),
               ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.menu),
+              Builder(
+                builder: (context) => IconButton(
+                  onPressed: () => Scaffold.of(context).openEndDrawer(),
+                  icon: Icon(Icons.menu),
+                ),
               ),
             ]);
 }
@@ -35,23 +38,32 @@ class MyDrawer extends Drawer {
               children: <Widget>[
                 InkWell(
                   onTap: () {},
-                  child: Text(
-                    'Личный кабинет',
-                    style: TextStyle(fontSize: 18.sp),
+                  child: Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      'Личный кабинет',
+                      style: TextStyle(fontSize: 18.sp),
+                    ),
                   ),
                 ),
                 InkWell(
                   onTap: () {},
-                  child: Text(
-                    'Информация',
-                    style: TextStyle(fontSize: 18.sp),
+                  child: Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      'Информация',
+                      style: TextStyle(fontSize: 18.sp),
+                    ),
                   ),
                 ),
                 InkWell(
                   onTap: () {},
-                  child: Text(
-                    'Контакты',
-                    style: TextStyle(fontSize: 18.sp),
+                  child: Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      'Контакты',
+                      style: TextStyle(fontSize: 18.sp),
+                    ),
                   ),
                 ),
               ],
